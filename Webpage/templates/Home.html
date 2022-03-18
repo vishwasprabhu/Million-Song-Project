@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="We recommend songs that you didn&amp;apos;t know you liked, User 1, User 2, User 3, User 4, User 5, User 6, User 7, User 8, User 9, User 10">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Home</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='nicepage.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='Home.css') }}">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static',filename='jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static',filename='nicepage.js') }}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.6.5, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Roboto+Slab:100,200,300,400,500,600,700,800,900">
+    
+    
+  
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-7bc8"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Songs.html" style="padding: 10px 20px;">Songs</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li></ul>
+          </div>
+          <div class="u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Songs.html">Songs</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="/static/images/background1.jpeg" /></a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            </div>
+        </div>
+    </nav>
+
+    <section class="u-clearfix u-section-2" id="sec-145f">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-text u-text-1">Who are you?</p>
+        <p class="u-align-center u-text u-text-1">Please Identify a user you connect the most to. We will introduce you to some cool vintage songs.</p>
+      </div>
+    </section>
+    {% for i in range(0,9,3) %}
+    <section class="u-clearfix u-section-3" id="sec-82b7">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div alt="" class="u-border-9 u-border-palette-2-base u-image u-image-circle u-image-1" data-image-width="820" data-image-height="540"></div>
+                <h2 class="u-text u-text-1"><a href="/users/{{fav_songs_genre[i][0]}}">The {{fav_songs_genre[i][2]}} fan</a></h2>
+                <!-- <h4 class="u-text u-text-2">{{fav_songs_genre[i][2]}}</h4> -->
+                <h5 class="u-text u-text-2">Favourite Songs</h4>
+                {% for j in range(3) %}
+                {{fav_songs_genre[i][1][j]}}<br>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <div alt="" class="u-border-9 u-border-palette-2-base u-image u-image-circle u-image-2" data-image-width="1000" data-image-height="1080"></div>
+                <h2 class="u-text u-text-1"><a href="/users/{{fav_songs_genre[i+1][0]}}">The {{fav_songs_genre[i+1][2]}} person</a></h2>
+                <!--<h4 class="u-text u-text-2">{{fav_songs_genre[i+1][2]}}</h4>-->
+                <h5 class="u-text u-text-2">Favourite Songs</h4>
+                {% for j in range(3) %}
+                {{ fav_songs_genre[i+1][1][j]}}<br>
+
+                {% endfor %}              
+              </div>
+            </div>
+
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <div alt="" class="u-border-9 u-border-palette-2-base u-image u-image-circle u-image-3" data-image-width="820" data-image-height="540"></div>
+                <h2 class="u-text u-text-1"><a href="/users/{{fav_songs_genre[i+2][0]}}">The {{fav_songs_genre[i+2][2]}} guy</a></h2>
+                <!-- <h4 class="u-text u-text-2">{{fav_songs_genre[i+2][2]}}</h4> -->
+                <h5 class="u-text u-text-2">Favourite Songs</h4>
+                {% for j in range(3) %}
+                {{ fav_songs_genre[i+2][1][j] }}<br>
+                {% endfor %}              
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-25f5"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">A cool class project done in partial fulfillment of the MSDS697 course at USFCA</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  </body>
+</html>

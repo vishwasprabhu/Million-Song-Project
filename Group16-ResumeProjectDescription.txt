@@ -1,0 +1,4 @@
+Resume Project Description
+
+- Built a scalable song recommender system by processing around a terabyte of data for over a million songs and users with distributed computing tools such as Pyspark, MongoDB and Databricks
+- State-of-the-art distributed models for collaborative filtering, clustering, and classification tasks were created and fine-tuned using Spark MLlib.  Also developed a product prototype front-end using HTML, CSS and Flask API to showcase the above model results.
